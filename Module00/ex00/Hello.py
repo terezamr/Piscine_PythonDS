@@ -8,8 +8,10 @@ ft_list[1] = "World!"
 aux = list(ft_tuple)
 aux[1] = "Portugal!"
 ft_tuple = tuple(aux)
+
 ft_set.remove("tutu!")
 ft_set.add("Lisbon!")
+
 ft_dict["Hello"] = "42Lisbon!"
 
 print(ft_list)
