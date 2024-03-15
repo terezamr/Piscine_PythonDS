@@ -11,8 +11,8 @@ def check_st(st):
 
     # Print results
     print("The text contains", total, "characters")
-    print(upper,"upper")
-    print(lower, "lower")
+    print(upper,"upper letters")
+    print(lower, "lower letters")
     print(punctuation, "punctuation marks")
     print(spaces, "spaces")
     print(digits, "digits")
@@ -21,10 +21,11 @@ def check_st(st):
 # check ex subject com duas frases como input, so conta a ultima
 def main():
     try:
+        st = ""
         if len(sys.argv) > 2:
             raise AssertionError("more than one element provided")
         if len(sys.argv) == 1:
-            st = input("Please enter a string: ")
+            #st = input("Please enter a string: ")
             while not st:
                 st = input("Please enter a string: ")
         else:
