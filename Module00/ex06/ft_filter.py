@@ -25,6 +25,8 @@ filter(function or None, iterable) --> filter object
 Return an iterator yielding those items of iterable for which function(item)
 is true. If function is None, return the items that are true."""
     try:
+        if not myFunc:
+            return
         newlist = [x for x in lst if myFunc(x)]
         return return_iterator(newlist)
     except:
@@ -33,7 +35,7 @@ is true. If function is None, return the items that are true."""
 def main():
     lst = [11, 21, 32, 84, 5, 92]
     lst1 = ft_filter(isEven, lst)
-    print(next(lst1))
+    #print(next(lst1))
 
     if lst1:
         print(list(lst1))
@@ -41,9 +43,13 @@ def main():
     if lst0:
         print(list(lst0))
     
-    print("----")
-    print(filter.__doc__)
-    print("----")
-    print(ft_filter.__doc__)
+    ("----")
+    #print(filter.__doc__)
+    #print("----")
+    #print(ft_filter.__doc__)
+
+    filter(None, lst)
+    ft_filter(None, lst)
+
 if __name__ == "__main__":
     main()
