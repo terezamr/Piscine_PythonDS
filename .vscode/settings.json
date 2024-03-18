@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.env.linux": {
+        "LD_PRELOAD" : null,
+    },
+    "files.associations": {
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "cmath": "cpp",
+        "stdexcept": "cpp",
+        "fstream": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp",
+        "limits": "cpp"
+    }
+}
