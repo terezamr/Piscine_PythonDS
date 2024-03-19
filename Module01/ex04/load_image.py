@@ -8,7 +8,6 @@ def ft_load(path: str) -> np.array:
             raise ValueError("Wrong picture format")
 
         img = Image.open(path) 
-        img.show()
         px = np.array(img)
         print("Format:", px.shape)
         return px
