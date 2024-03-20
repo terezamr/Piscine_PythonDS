@@ -11,29 +11,24 @@ def projection_life(y: str):
     # year index
     index_inc = income.columns.get_loc(y)
 
-    #life expectancy data for year x
-    print("check: ", income['1900'])
-    income = income.T
+    # life expectancy data for year y
+    income = income.T #transposes data set so that each row is the data for a year
     datax = income.values[index_inc][0:]
-    print(datax)
 
-
-    #income data for year x
-    print("check: ", life_expectancy['1900'])
+    # income data for year x
     life_expectancy = life_expectancy.T
-    print(life_expectancy)
     datay = life_expectancy.values[index_inc][0:]
-    print(datay)
 
+    # creates data set relating income data and life expectancy for every contry in year y
     df = pd.DataFrame({'x': datax, 'y': datay})
-    df.plot.scatter(x='x', y='y', color='blue', marker='o')
 
     # plot
-    #plt.plot(datax, datay, color="lightblue")
+    df.plot.scatter(x='x', y='y', color='blue', marker='o')
     plt.xlabel('Gross domestic product')
     plt.ylabel('Life Expectancy')
     plt.title(y)
-    #plt.xticks(years[::10])
+    plt.xscale('log')
+    plt.xticks([300, 1000, 10000], ['300', '1k', '10k'])
     plt.show()
 
 def main():

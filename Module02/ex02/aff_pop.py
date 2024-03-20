@@ -39,6 +39,9 @@ def aff_pop(ct1: str, ct2:str):
     plt.ylabel('Population')
     plt.title("Population Projections")
     plt.xticks(years[::40])
+    yticks = list(range(20, 80, 20))
+    yticks_coord = [x * 1000000 for x in yticks]
+    plt.yticks(yticks_coord, [f"{x}M" for x in yticks])
     plt.legend(loc='lower right')
     plt.show()
 
